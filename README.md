@@ -55,6 +55,29 @@ Twitch Helper Generator creates ready-to-use HTML overlays for OBS with:
 
 ---
 
+## What is a Twitch Bot?
+
+A **Twitch bot** is an automated account that can perform actions in your Twitch chat, such as posting messages, responding to commands, or interacting with overlays like the Pomodoro timer and Taskboard.  
+
+In this app, the bot is used to send and receive chat messages from your Twitch channel so the generated overlays can reflect real-time tasks or timer events.  
+
+---
+
+## Creating a Twitch Bot Account
+
+If you don’t already have a separate bot account, follow these steps:
+
+1. Go to [Twitch.tv](https://www.twitch.tv/) and create a **new account** specifically for the bot.  
+   - This keeps your main channel account separate from the bot, improving security.  
+2. Choose a username for your bot (e.g., `MyChannelBot`).  
+3. Verify the account via email.  
+4. Once the account is ready, use the [Twitch Token Generator](https://twitchtokengenerator.com/) to generate a **Bot Chat Token** for this bot account.  
+5. Paste the token into the **OAuth Token** field in the app.  
+
+> ⚠️ Never use your main Twitch account as a bot. Always create a dedicated bot account to keep credentials safe and prevent accidental bans.
+> 
+---
+
 ## License
 
 All Rights Reserved © 2025 DarkwireStudios  
