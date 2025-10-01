@@ -16,6 +16,14 @@ Twitch Helper Generator creates ready-to-use HTML overlays for OBS with:
 
 ---
 
+## Future Plans
+
+* **Move Twitch credentials to a `.env` file** – Currently, the bot username, OAuth token, and channel name are stored in localStorage. Switching to a `.env` file will improve security and make managing credentials easier.
+* **[Planned] Additional customization options** – More overlay color themes and layout options.
+* **[Planned] Bot Migration Tool** – Allow users to migrate data from an old version of the bot to a new version via a file input and **Migrate** button. This will make updating or restructuring the bot seamless.
+
+---
+
 ## How to Use the Zip Release
 
 1. **Download the zip** of the latest release.  
