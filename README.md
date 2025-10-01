@@ -61,49 +61,63 @@ When submitting an issue, include:
 
 ---
 
-## Twitch Commands – Pomodoro Timer
+# Twitch Command List
 
-> **Note:** Only moderators or the broadcaster can use these commands.
+## Pomodoro Timer Commands
 
-| Command                                       | Usage                                | Description                                                                                                      |
-| --------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `!pomogoal {number}`                          | `!pomogoal 5`                        | Sets the Pomodoro goal (number of sessions to complete).                                                         |
-| `!pomostart {pomoMinutes} {breakMinutes}`     | `!pomostart 25 5`                    | Starts the Pomodoro timer with the specified Pomodoro and break lengths in minutes. Resets current session to 1. |
-| `!resetpomo`                                  | `!resetpomo`                         | Resets the Pomodoro timer to default settings (25 min Pomodoro, 5 min break, current session = 1).               |
-| `!pause`                                      | `!pause`                             | Pauses the current Pomodoro timer.                                                                               |
-| `!resume`                                     | `!resume`                            | Resumes a paused Pomodoro timer.                                                                                 |
-| `!clearstorage`                               | `!clearstorage`                      | Clears all Pomodoro settings and progress stored in local storage and resets the timer.                          |
-| `!pomogo {pomoMinutes} {breakMinutes} {goal}` | `!pomogo 25 5 5` or `!pomogo 25 5 ?` | Updates Pomodoro timer with specific Pomodoro length, break length, and goal. Use `?` for unlimited sessions.    |
+> Commands for controlling the Pomodoro timer. Restricted to moderators or broadcaster.
 
-**Notes:**
-
-* `{number}` refers to an integer.
-* `{pomoMinutes}` and `{breakMinutes}` are in minutes.
-* `{goal}` is either a number of Pomodoros to complete or `?` for unlimited sessions.
-* If you enter an invalid format, the bot will return usage instructions.
+| Command         | Usage                                         | Description                                                           |
+| --------------- | --------------------------------------------- | --------------------------------------------------------------------- |
+| `!pomogoal`     | `!pomogoal {number}`                          | Set the Pomodoro goal (number of Pomodoros).                          |
+| `!pomostart`    | `!pomostart {pomoMinutes} {breakMinutes}`     | Start a Pomodoro timer with specified work and break durations.       |
+| `!pomogo`       | `!pomogo {pomoMinutes} {breakMinutes} {goal}` | Start a Pomodoro with custom goal. Use `?` for unlimited goal.        |
+| `!resetpomo`    | `!resetpomo`                                  | Reset Pomodoro timer to default settings (25 min work / 5 min break). |
+| `!pause`        | `!pause`                                      | Pause the Pomodoro timer.                                             |
+| `!resume`       | `!resume`                                     | Resume the Pomodoro timer.                                            |
+| `!clearstorage` | `!clearstorage`                               | Clear saved Pomodoro settings and reset timer.                        |
 
 ---
 
-## Twitch Commands – Taskboard
+## Taskboard – User Commands
 
-> **Note:** Some commands are user-specific; others require moderator or broadcaster permissions.
+> Commands any viewer can use for managing their personal tasks.
 
-| Command                       | Usage                           | Description                                                                                                 |
-| ----------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `!add {task1}, {task2}, ...`  | `!add Do homework, Clean desk`  | Adds one or more tasks to your personal task list (comma-separated, max 15 tasks).                          |
-| `!task {task1}, {task2}, ...` | `!task Buy groceries, Exercise` | Alias for `!add`. Adds tasks to your personal task list.                                                    |
-| `!remove {taskNumber}`        | `!remove 2`                     | Removes a specific task from your list by its number.                                                       |
-| `!done {taskNumber(s)}`       | `!done 1 3`                     | Marks one or multiple tasks as finished. If no number is provided, marks the first unfinished task as done. |
-| `!start {taskNumber}`         | `!start 1`                      | Sets a specific task as the “current task” you are working on. Only unfinished tasks can be set.            |
-| `!clear`                      | `!clear`                        | Removes all finished tasks from your personal task list.                                                    |
-| `!clearalldone`               | `!clearalldone`                 | **Moderator/Broadcaster only.** Removes all finished tasks for all users.                                   |
+| Command   | Usage                              | Description                                                                                  |
+| --------- | ---------------------------------- | -------------------------------------------------------------------------------------------- |
+| `!add`    | `!add Task 1, Task 2`              | Add new tasks (up to 15 at once).                                                            |
+| `!task`   | `!task Task 1, Task 2`             | Alias for `!add`.                                                                            |
+| `!remove` | `!remove {taskNumber}`             | Remove a specific task by its number.                                                        |
+| `!done`   | `!done {taskNumber(s)}`            | Mark one or multiple tasks as finished. Omitting the number marks the first unfinished task. |
+| `!start`  | `!start {taskNumber}`              | Mark a task as “current” to show it prominently on the taskboard.                            |
+| `!clear`  | `!clear`                           | Remove all finished tasks from your list.                                                    |
+| `!edit`   | `!edit {taskNumber} {newTaskText}` | Edit the text of a specific task.                                                            |
+| `!check`  | `!check`                           | List your unfinished tasks with their numbers.                                               |
+| `!tbhelp` | `!tbhelp`                          | Show a list of all **user** Taskboard commands.                                              |
 
-**Notes:**
+---
 
-* Task numbers are **1-based** (the first task is `1`).
-* Each user has their **own task list**; commands affect only the issuing user unless mod/broadcaster commands are used.
-* You can add multiple tasks at once by separating them with commas.
-* Finished tasks are tracked and can be removed individually (`!done`) or in bulk (`!clear` or `!clearalldone`).
+## Taskboard – Moderator / Broadcaster Commands
+
+> Commands restricted to moderators and the channel broadcaster. Affect multiple users.
+
+| Command           | Usage                                     | Description                                                      |
+| ----------------- | ----------------------------------------- | ---------------------------------------------------------------- |
+| `!clearalldone`   | `!clearalldone`                           | Remove all finished tasks for everyone.                          |
+| `!clearalltasks`  | `!clearalltasks`                          | Clear **all tasks** for every user.                              |
+| `!cleartasksuser` | `!cleartasksuser {username}`              | Clear all tasks for a specific user.                             |
+| `!removetaskuser` | `!removetaskuser {username} {taskNumber}` | Remove a specific task from another user.                        |
+| `!tbhelpmod`      | `!tbhelpmod`                              | Show a list of all **moderator/broadcaster** Taskboard commands. |
+
+---
+
+### Notes
+
+* Users can only modify **their own tasks**.
+* Moderators and broadcasters can manage **all users’ tasks**.
+* Commands are **case-insensitive**.
+* For multiple tasks in `!add` or `!task`, separate with commas.
+* Task indices start at `1`.
 
 ---
 
