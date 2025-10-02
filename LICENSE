@@ -1,4 +1,11 @@
-All Rights Reserved © 2025 DarkwireStudios
+All Rights Reserved © 2025 DarkwireStudios  
 
-This software and associated files are the exclusive property of DarkwireStudios.
-No part of this software may be copied, modified, distributed, or used without explicit written permission from the copyright holder.
+This software may not be copied, modified, or redistributed without explicit written permission, except where required by the licenses of third-party components.  
+
+This application uses third-party libraries distributed under their own licenses:  
+
+- Electron (MIT License)  
+- tmi.js (MIT License)  
+- Other npm dependencies (MIT, ISC, Apache 2.0, etc.)  
+
+See THIRD_PARTY_LICENSES.md for details.
