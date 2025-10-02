@@ -1,11 +1,15 @@
-All Rights Reserved © 2025 DarkwireStudios  
+All Rights Reserved © 2025 DarkwireStudios
 
-This software may not be copied, modified, or redistributed without explicit written permission, except where required by the licenses of third-party components.  
+This software (the "Application") is proprietary and may not be copied, modified, redistributed, or used for commercial purposes without explicit written permission from DarkwireStudios.
 
-This application uses third-party libraries distributed under their own licenses:  
+However, this Application is built on top of third-party open-source software components, which remain under their respective licenses. These include, but are not limited to:
 
-- Electron (MIT License)  
-- tmi.js (MIT License)  
-- Other npm dependencies (MIT, ISC, Apache 2.0, etc.)  
+- Electron (MIT License)
+- tmi.js (MIT License)
+- Chromium and other dependencies (various licenses, see LICENSES.chromium.html)
 
-See THIRD_PARTY_LICENSES.md for details.
+Copies of these licenses are provided in:
+- THIRD_PARTY_LICENSES.md
+- LICENSES.chromium.html (from Electron distribution)
+
+Use of this software implies acceptance of both this license and the licenses of third-party components.
