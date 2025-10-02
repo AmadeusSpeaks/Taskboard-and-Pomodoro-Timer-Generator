@@ -163,8 +163,19 @@ If you don’t already have a separate bot account, follow these steps:
 > 
 ---
 
-## License
+All Rights Reserved © 2025 DarkwireStudios
 
-All Rights Reserved © 2025 DarkwireStudios  
+This software (the "Application") is proprietary and may not be copied, modified, redistributed, or used for commercial purposes without explicit written permission from DarkwireStudios.
 
-Do not copy, modify, redistribute, or use this software without explicit written permission.
+However, this Application is built on top of third-party open-source software components, which remain under their respective licenses. These include, but are not limited to:
+
+- Electron (MIT License)
+- tmi.js (MIT License)
+- Chromium and other dependencies (various licenses, see LICENSES.chromium.html)
+
+Copies of these licenses are provided in:
+- THIRD_PARTY_LICENSES.md
+- LICENSES.chromium.html (from Electron distribution)
+
+Use of this software implies acceptance of both this license and the licenses of third-party components.
+
